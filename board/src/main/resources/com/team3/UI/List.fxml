@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.team3.Controller.ListController">
+   <children>
+      <Label alignment="CENTER" layoutX="395.0" layoutY="28.0" text="목록">
+         <font>
+            <Font size="45.0" />
+         </font>
+      </Label>
+      <TableView fx:id="boardTableView" layoutX="30.0" layoutY="100.0" prefHeight="400.0" prefWidth="820.0">
+        <columns>
+            <TableColumn fx:id="colCbDelete" prefWidth="30.0">
+               <graphic>
+                  <CheckBox fx:id="cbAll" mnemonicParsing="false" />
+               </graphic>
+            </TableColumn>
+          <TableColumn fx:id="colNo" text="글 번호" />
+          <TableColumn fx:id="colTitle" prefWidth="270.0" text="제목" />
+            <TableColumn fx:id="colWriter" prefWidth="120.0" text="작성자" />
+            <TableColumn fx:id="colCreatedAt" prefWidth="160.0" text="등록일자" />
+            <TableColumn fx:id="colUpdatedAt" prefWidth="160.0" text="수정일자" />
+        </columns>
+      </TableView>
+      <Button layoutX="30.0" layoutY="528.0" mnemonicParsing="false" onAction="#close" prefHeight="40.0" prefWidth="100.0" text="종료하기">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="145.0" layoutY="528.0" mnemonicParsing="false" onAction="#deleteSelected" prefHeight="40.0" prefWidth="100.0" text="선택삭제">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="750.0" layoutY="528.0" mnemonicParsing="false" onAction="#moveToInsert" prefHeight="40.0" prefWidth="100.0" text="글쓰기">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
