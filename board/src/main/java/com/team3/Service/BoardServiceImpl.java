@@ -44,24 +44,26 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 	public int update(Board board) {
-		int result = boardDAO.update(board);
-		// 적용된 데이터 개수를 반환
-		// - result(결과)	: 0 --> 데이터 수정 실패
-		//				      1 --> 데이터 수정 성공
-		if( result > 0 ) System.out.println("데이터 수정 성공!");
-		else System.err.println("데이터 수정 실패!");
-		return result;
+		// int result = boardDAO.update(board);
+		// // 적용된 데이터 개수를 반환
+		// // - result(결과)	: 0 --> 데이터 수정 실패
+		// //				      1 --> 데이터 수정 성공
+		// if( result > 0 ) System.out.println("데이터 수정 성공!");
+		// else System.err.println("데이터 수정 실패!");
+		// return result;
+		return 0;
 	}
 
 	@Override
 	public int delete(int no) {
-		int result = boardDAO.delete(no);
-		// 적용된 데이터 개수를 반환
-		// - result(결과)	: 0 --> 데이터 삭제 실패
-		//				  1 --> 삭제 수정 성공
-		if( result > 0 ) System.out.println("데이터 삭제 성공!");
-		else System.err.println("데이터 삭제 실패!");
-		return result;
+		// int result = boardDAO.delete(no);
+		// // 적용된 데이터 개수를 반환
+		// // - result(결과)	: 0 --> 데이터 삭제 실패
+		// //				  1 --> 삭제 수정 성공
+		// if( result > 0 ) System.out.println("데이터 삭제 성공!");
+		// else System.err.println("데이터 삭제 실패!");
+		// return result;
+		return 0;
 	}
 	
 	
