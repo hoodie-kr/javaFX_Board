@@ -5,6 +5,7 @@ import java.io.IOException;
 import com.team3.DTO.Board;
 import com.team3.Service.BoardService;
 import com.team3.Service.BoardServiceImpl;
+import com.team3.Util.SceneUtil;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
