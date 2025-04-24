@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -19,6 +20,12 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("Main"));
         stage.setScene(scene);
+
+        Image icon = new Image("icon.png");
+        stage.getIcons().add(icon);
+        stage.setTitle("TEAM3 게시판");
+        stage.setResizable(false);
+
         stage.show();
     }
 
