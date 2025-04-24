@@ -11,14 +11,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 
 public class UpdateController {
-
-    @FXML
-    private Button alert;
 
     @FXML
     private TextField taContent;
@@ -30,8 +26,17 @@ public class UpdateController {
     private TextField tfWriter;
 
     private BoardService boardService = new BoardServiceImpl();
+
     int no;
-    @FXML
+
+    public void read(int no) {
+		this.no = no;
+		Board board = boardService.select(no);
+		tfTitle.setText(board.getTitle());
+		tfWriter.setText(board.getWriter());
+		taContent.setText(board.getContent());
+	}
+
     public void delete(ActionEvent event) throws IOException {
         Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setTitle("게시글 삭제");
@@ -49,12 +54,10 @@ public class UpdateController {
 		}
     }
 
-    @FXML
     public void moveToList(ActionEvent event) throws IOException {
         SceneUtil.getInstance().switchScene(event, UI.LIST.getPath());
     }
 
-    @FXML
     public void update(ActionEvent event) throws IOException {
         Board board = new Board(tfTitle.getText(), tfWriter.getText(), taContent.getText() );
 		board.setNo(no);
