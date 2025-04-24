@@ -19,12 +19,12 @@ import javafx.scene.control.CheckBox;
 		//모든생성자
 public class Board {
 
-	private int boardNo;
+	private int no;
 	private String title;
 	private String writer;
 	private String content;
-	private String regDate;
-	private String updDate;
+	private String createdAt;
+	private String updatedAt;
 	private CheckBox cbDelete;
 	
 	// 날짜 형식
@@ -38,15 +38,15 @@ public class Board {
 		this.title = title;
 		this.writer = writer;
 		this.content = content;
-		this.regDate = dateFormat.format(new Date());
-		this.updDate = dateFormat.format(new Date());
+		this.createdAt = dateFormat.format(new Date());
+		this.updatedAt = dateFormat.format(new Date());
 		this.cbDelete = new CheckBox();
 	}
-	public int getBoardNo() {
-		return boardNo;
+	public int getNo() {
+		return no;
 	}
-	public void setBoardNo(int boardNo) {
-		this.boardNo = boardNo;
+	public void setNo(int no) {
+		this.no = no;
 	}
 	public String getTitle() {
 		return title;
@@ -66,17 +66,17 @@ public class Board {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getRegDate() {
-		return regDate;
+	public String getCreatedAt() {
+		return createdAt;
 	}
-	public void setRegDate(String regDate) {
-		this.regDate = regDate;
+	public void setCreatedAt(String createdAt) {
+		this.createdAt = createdAt;
 	}
-	public String getUpdDate() {
-		return updDate;
+	public String getUpdatedAt() {
+		return updatedAt;
 	}
-	public void setUpdDate(String updDate) {
-		this.updDate = updDate;
+	public void setUpdatedAt(String updatedAt) {
+		this.updatedAt = updatedAt;
 	}
 	public CheckBox getCbDelete() {
 		return cbDelete;
@@ -86,8 +86,8 @@ public class Board {
 	}
 	@Override
 	public String toString() {
-		return "Board [boardNo=" + boardNo + ", title=" + title + ", writer=" + writer + ", content=" + content
-				+ ", regDate=" + regDate + ", updDate=" + updDate + "]";
+		return "Board [no=" + no + ", title=" + title + ", writer=" + writer + ", content=" + content
+				+ ", createdAt=" + createdAt + ", updatedAt=" + updatedAt + "]";
 	}
 	
 	

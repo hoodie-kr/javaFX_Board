@@ -38,7 +38,7 @@ public class ReadController {
 	
 	// 목록 화면 이동
 	public void moveToList(ActionEvent event) throws IOException {
-		SceneUtil.getInstance().switchScene(event, UI.MAIN.getPath());
+		SceneUtil.getInstance().switchScene(event, UI.LIST.getPath());
 	}
 	
 	// 수정 화면 이동
