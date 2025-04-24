@@ -25,7 +25,7 @@ public class InsertController {
 	
 	 
 	 public void moveToList(ActionEvent event) throws IOException {
-		 SceneUtil.getInstance().switchScene(event, UI.MAIN.getPath());
+		 SceneUtil.getInstance().switchScene(event, UI.LIST.getPath());
 	 }
 	
 	
@@ -34,7 +34,7 @@ public class InsertController {
 		 int result = boardService.insert(board);
 		 if( result > 0 ) {
 			 System.out.println("글쓰기 처리 성공!");
-			 SceneUtil.getInstance().switchScene(event, UI.MAIN.getPath());
+			 SceneUtil.getInstance().switchScene(event, UI.LIST.getPath());
 		 }
 	 }
 }
