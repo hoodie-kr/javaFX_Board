@@ -104,11 +104,11 @@ public class ListController implements Initializable {
 			public void handle(MouseEvent event) {
 				
 				if (event.getClickCount() == 2 && boardTableView.getSelectionModel().getSelectedItem() != null) {
-					int no = boardTableView.getSelectionModel().getSelectedItem().getBoardNo();
+					int no = boardTableView.getSelectionModel().getSelectedItem().getNo();
 					try {
 						ReadController readController = (ReadController) SceneUtil.getInstance().getController(UI.READ.getPath());
 						readController.read(no);
-						
+						// Main.setRoot("UI/Read");
 						Parent root = SceneUtil.getInstance().getRoot();
 						SceneUtil.getInstance().switchScene(event, UI.READ.getPath(), root);
 					} catch (IOException e) {
@@ -156,7 +156,7 @@ public class ListController implements Initializable {
 	    // 확인하면 체크된 항목 모두 삭제
 	    if (result.isPresent() && result.get() == ButtonType.OK) {
 	        for (Board board : selectedBoard) {
-	            boardService.delete(board.getBoardNo());
+	            boardService.delete(board.getNo());
 	        }
 	        System.out.println("삭제가 완료되었습니다.");
 	        

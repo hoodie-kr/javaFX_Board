@@ -2,6 +2,8 @@ package com.team3.Util;
 
 import java.io.IOException;
 
+import com.team3.Main;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -57,7 +59,8 @@ public class SceneUtil {
 	 * @throws IOException
 	 */
 	public void switchScene(ActionEvent event, String fxml) throws IOException {
-		Parent root = FXMLLoader.load(getClass().getResource(fxml));
+		Parent root = FXMLLoader.load(Main.class.getResource(fxml));
+		FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(fxml + ".fxml"));
 		stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
@@ -97,7 +100,7 @@ public class SceneUtil {
 	 * @throws IOException
 	 */
 	public Object getController(String fxml) throws IOException {
-		loader = new FXMLLoader(getClass().getResource(fxml));
+		loader = new FXMLLoader(Main.class.getResource(fxml));
 		root = loader.load();
 		return loader.getController();
 	}

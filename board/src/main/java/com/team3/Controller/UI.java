@@ -5,10 +5,10 @@ package com.team3.Controller;
  */
 public enum UI {
 	
-	LIST("/resources/com/team3/UI/List.fxml"),
-	INSERT("/resources/com/team3/UI/UI/Insert.fxml"),
-	READ("/resources/com/team3/UI/UI/Read.fxml"),
-	UPDATE("/resources/com/team3/UI/UI/Update.fxml");
+	LIST("UI/List.fxml"),
+	INSERT("UI/Insert.fxml"),
+	READ("UI/Read.fxml"),
+	UPDATE("UI/Update.fxml");
 	
 	private final String path;
 	

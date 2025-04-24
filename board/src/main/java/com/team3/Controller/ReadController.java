@@ -9,7 +9,6 @@ import com.team3.Util.SceneUtil;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Parent;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
@@ -43,10 +42,10 @@ public class ReadController {
 	
 	// 수정 화면 이동
 	public void moveToUpdate(ActionEvent event) throws IOException {
-		UpdateController updateController = (UpdateController) SceneUtil.getInstance().getController(UI.UPDATE.getPath());
-		updateController.read(boardNo);
-		Parent root = SceneUtil.getInstance().getRoot();
-		SceneUtil.getInstance().switchScene(event, UI.UPDATE.getPath(), root);
+	// 	UpdateController updateController = (UpdateController) SceneUtil.getInstance().getController(UI.UPDATE.getPath());
+	// 	updateController.read(boardNo);
+	// 	Parent root = SceneUtil.getInstance().getRoot();
+	// 	SceneUtil.getInstance().switchScene(event, UI.UPDATE.getPath(), root);
 	}
 	
 }

@@ -5,15 +5,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.team3.Controller.MainController">
    <children>
       <Label alignment="CENTER" layoutX="184.0" layoutY="33.0" text="게시판 프로그램">
          <font>
             <Font size="32.0" />
          </font>
       </Label>
-      <Button alignment="CENTER" layoutX="203.0" layoutY="177.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="196.0" text="게시글 목록">
+      <Button alignment="CENTER" layoutX="203.0" layoutY="177.0" mnemonicParsing="false" onAction="#toList" prefHeight="47.0" prefWidth="196.0" text="게시글 목록">
          <font>
             <Font size="24.0" />
          </font>
